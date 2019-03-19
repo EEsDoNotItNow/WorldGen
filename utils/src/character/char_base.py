@@ -8,9 +8,37 @@ class char_base:
         self.name = kwards.get('name', 'N/A')
         self.age = kwards.get('age', np.random.normal(30,10))
         self.weight = kwards.get('weight', np.random.normal(70,15))
+        # TODO: This generator stuff should be moved to a specific generation class, and 
+        #   better defaults picked for these values.
         self.temperament = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
         self.law_abiding = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
         self.opinionated = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
+
+        """ 
+        Potential fields:
+            ambitious
+            artsy
+            assurance
+            cautious
+            communication
+            compassionate
+            conscientiousness
+            empath
+            extroversion
+            law_abiding
+            leadership
+            opinionated
+            optimistic
+            organized
+            power
+            rationality
+            resourcefulness
+            self-control
+            sociability
+            spiritual
+            temperament
+            visionary
+        """
 
 
     def __str__(self):
