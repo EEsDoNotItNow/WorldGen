@@ -4,14 +4,15 @@ import numpy as np
 class char_base:
 
     def __init__(self, *args, **kwargs):
-        self.name = kwargs.get('name', 'N/A')
-        self.age = kwargs.get('age', np.random.normal(30,10))
-        self.weight = kwargs.get('weight', np.random.normal(70,15))
+        self.name = kwargs.get('name')
+        self.age = kwargs.get('age')
+        self.weight = kwargs.get('weight')
         # TODO: This generator stuff should be moved to a specific generation class, and 
         #   better defaults picked for these values.
-        self.temperament = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
-        self.law_abiding = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
-        self.opinionated = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
+        self.profession = kwargs.get('profession')
+        self.temperament = kwargs.get('temperament')
+        self.law_abiding = kwargs.get('law_abiding')
+        self.opinionated = kwargs.get('opinionated')
         """ 
         Potential fields:
             ambitious
@@ -57,6 +58,7 @@ class char_base:
         print(f"       Name: {self.name}")
         print(f"        Age: {self.age:.0f} years")
         print(f"     Weight: {self.weight:.0f} kg")
+        print(f" Profession: {self.profession}")
         print(f"Temperament: {self.temperament:4.0%} [{self.bar_fill(self.temperament, 20)}] ")
         print(f"Law Abiding: {self.law_abiding:4.0%} [{self.bar_fill(self.law_abiding, 20)}] ")
         print(f"Opinionated: {self.opinionated:4.0%} [{self.bar_fill(self.opinionated, 20)}] ")

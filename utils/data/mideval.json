@@ -1,0 +1,161 @@
+{
+    "professions": {
+        "baker": {
+            "sv": 800
+        },
+        "barber": {
+            "sv": 350
+        },
+        "bather": {
+            "sv": 1900
+        },
+        "beer-seller": {
+            "sv": 1400
+        },
+        "blacksmith": {
+            "sv": 1500
+        },
+        "bleacher": {
+            "sv": 2100
+        },
+        "bookbinders butcher": {
+            "sv": 3000
+        },
+        "bookseller": {
+            "sv": 6300
+        },
+        "buckle maker": {
+            "sv": 1400
+        },
+        "butcher": {
+            "sv": 1200
+        },
+        "carpenter": {
+            "sv": 550
+        },
+        "chandler": {
+            "sv": 700
+        },
+        "chicken butcher": {
+            "sv": 1000
+        },
+        "cooper": {
+            "sv": 700
+        },
+        "copyist": {
+            "sv": 2000
+        },
+        "cutler": {
+            "sv": 2300
+        },
+        "doctor": {
+            "sv": 1700
+        },
+        "fishmonger": {
+            "sv": 1200
+        },
+        "furrier": {
+            "sv": 250
+        },
+        "glovemaker": {
+            "sv": 2400
+        },
+        "harness-maker": {
+            "sv": 2000
+        },
+        "hatmaker": {
+            "sv": 950
+        },
+        "hay merchant": {
+            "sv": 2300
+        },
+        "illuminator": {
+            "sv": 3900
+        },
+        "inn": {
+            "sv": 2000
+        },
+        "jeweler": {
+            "sv": 400
+        },
+        "locksmith": {
+            "sv": 1900
+        },
+        "magic-shop": {
+            "sv": 2800
+        },
+        "maidservant": {
+            "sv": 250
+        },
+        "mason": {
+            "sv": 500
+        },
+        "mercer": {
+            "sv": 700
+        },
+        "old-clothe": {
+            "sv": 400
+        },
+        "painter": {
+            "sv": 1500
+        },
+        "pastrycook": {
+            "sv": 500
+        },
+        "plasterer": {
+            "sv": 1400
+        },
+        "pursemaker": {
+            "sv": 1100
+        },
+        "roofer": {
+            "sv": 1800
+        },
+        "ropemaker": {
+            "sv": 1900
+        },
+        "rugmaker": {
+            "sv": 2000
+        },
+        "saddler": {
+            "sv": 1000
+        },
+        "scabbardmaker": {
+            "sv": 850
+        },
+        "sculptor": {
+            "sv": 2000
+        },
+        "shoemaker": {
+            "sv": 150
+        },
+        "spice merchant": {
+            "sv": 1400
+        },
+        "tailor": {
+            "sv": 250
+        },
+        "tanner": {
+            "sv": 2000
+        },
+        "taverns/restaurant": {
+            "sv": 400
+        },
+        "watercarrier": {
+            "sv": 850
+        },
+        "weaver": {
+            "sv": 600
+        },
+        "wine-seller": {
+            "sv": 900
+        },
+        "woodcarver": {
+            "sv": 2400
+        },
+        "woodseller": {
+            "sv": 2400
+        }
+    },
+    "source": "https://gamingballistic.com/wp-content/uploads/2018/11/Medieval-Demographics-Made-Easy-1.pdf"
+}
