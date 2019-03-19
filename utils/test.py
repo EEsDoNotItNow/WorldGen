@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from src.character import spawner
+from src.character import spawner, char_base
 import json
 
 print("hello world!")
@@ -23,5 +23,10 @@ for prof in demo_data['professions']:
 
 s = spawner(demographics=demo_data)
 
-for x in s.get_pop_iter(5):
-    x.card()
+# for x in s.get_pop_iter(5):
+#     x.card()
+
+x = char_base()
+vals = 5
+for i in range(-vals//2-1,vals//2+2):
+    print(f"[{x.slider_fill(i,vals)}]")
