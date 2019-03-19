@@ -3,17 +3,15 @@ import numpy as np
 
 class char_base:
 
-    def __init__(self, *args, **kwards):
-
-        self.name = kwards.get('name', 'N/A')
-        self.age = kwards.get('age', np.random.normal(30,10))
-        self.weight = kwards.get('weight', np.random.normal(70,15))
+    def __init__(self, *args, **kwargs):
+        self.name = kwargs.get('name', 'N/A')
+        self.age = kwargs.get('age', np.random.normal(30,10))
+        self.weight = kwargs.get('weight', np.random.normal(70,15))
         # TODO: This generator stuff should be moved to a specific generation class, and 
         #   better defaults picked for these values.
         self.temperament = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
         self.law_abiding = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
         self.opinionated = np.clip((0.5 + np.random.randn() * 0.2), 0, 1)
-
         """ 
         Potential fields:
             ambitious
