@@ -12,12 +12,13 @@ class char_base:
         self.profession = kwargs.get('profession')
 
         # Numeric Values
+        # TODO: Move all these into a dictionary of relevent data
         self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
         self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
         self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Assure 
         self.cautious = kwargs.get('cautious', 0.0) # Cautious <-> Reckless
         self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
-        self.compassionate = kwargs.get('compassionate', 0.0) # Callous <-> Kind
+        self.compassionate = kwargs.get('compassionate', 0.0) # Cruel <-> Kind
         self.conscientiousness = kwargs.get('conscientiousness', 0.0) # Negligent <-> Meticulous 
         self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
         self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
@@ -29,7 +30,7 @@ class char_base:
         self.power = kwargs.get('power', 0.0) # Impotent <-> Mighty
         self.rationality = kwargs.get('rationality', 0.0) # Irrational <-> Reasonable
         self.resourcefulness = kwargs.get('resourcefulness', 0.0) # Unoriginal <-> Ingenious
-        self.self_control = kwargs.get('self_control', 0.0) # Indulgent <-> Restrained
+        self.self_control = kwargs.get('self_control', 0.0) # Indulgent <-> Disciplined
         self.sociability = kwargs.get('sociability', 0.0) # Coy <-> Gregarious 
         self.spiritual = kwargs.get('spiritual', 0.0) # Material <-> Spiritual
         self.temperament = kwargs.get('temperament', 0.0) # Nervous <-> Relaxed
