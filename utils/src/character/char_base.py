@@ -10,34 +10,30 @@ class char_base:
         # TODO: This generator stuff should be moved to a specific generation class, and 
         #   better defaults picked for these values.
         self.profession = kwargs.get('profession')
-        self.temperament = kwargs.get('temperament')
-        self.law_abiding = kwargs.get('law_abiding')
-        self.opinionated = kwargs.get('opinionated')
-        """ 
-        Potential fields:
-            ambitious
-            artsy
-            assurance
-            cautious
-            communication
-            compassionate
-            conscientiousness
-            empath
-            extroversion
-            law_abiding
-            leadership
-            opinionated
-            optimistic
-            organized
-            power
-            rationality
-            resourcefulness
-            self-control
-            sociability
-            spiritual
-            temperament
-            visionary
-        """
+
+        # Numeric Values
+        self.ambitious  = kwargs.get('ambitious', 0.0)
+        self.artsy = kwargs.get('artsy', 0.0)
+        self.assurance = kwargs.get('assurance', 0.0)
+        self.cautious = kwargs.get('cautious', 0.0)
+        self.communication = kwargs.get('communication', 0.0)
+        self.compassionate = kwargs.get('compassionate', 0.0)
+        self.conscientiousness = kwargs.get('conscientiousness', 0.0)
+        self.empathy = kwargs.get('empathy', 0.0)
+        self.extroversion = kwargs.get('extroversion', 0.0)
+        self.law_abiding = kwargs.get('law_abiding', 0.0)
+        self.leadership = kwargs.get('leadership', 0.0)
+        self.opinionated = kwargs.get('opinionated', 0.0)
+        self.optimistic = kwargs.get('optimistic', 0.0)
+        self.organized = kwargs.get('organized', 0.0)
+        self.power = kwargs.get('power', 0.0)
+        self.rationality = kwargs.get('rationality', 0.0)
+        self.resourcefulness = kwargs.get('resourcefulness', 0.0)
+        self.self_control = kwargs.get('self_control', 0.0)
+        self.sociability = kwargs.get('sociability', 0.0)
+        self.spiritual = kwargs.get('spiritual', 0.0)
+        self.temperament = kwargs.get('temperament', 0.0)
+        self.visionary = kwargs.get('visionary', 0.0)
 
 
     def __str__(self):
@@ -92,6 +88,6 @@ class char_base:
         print(f"        Age: {self.age:.0f} years")
         print(f"     Weight: {self.weight:.0f} kg")
         print(f" Profession: {self.profession}")
-        print(f"Temperament: {self.temperament:4.0%} [{self.bar_fill(self.temperament, 5)}] ")
-        print(f"Law Abiding: {self.law_abiding:4.0%} [{self.bar_fill(self.law_abiding, 5)}] ")
-        print(f"Opinionated: {self.opinionated:4.0%} [{self.bar_fill(self.opinionated, 5)}] ")
+        print(f"Temperament: {self.temperament:4.1f} [{self.slider_fill(self.temperament, 5)}] ")
+        print(f"Law Abiding: {self.law_abiding:4.1f} [{self.slider_fill(self.law_abiding, 5)}] ")
+        print(f"Opinionated: {self.opinionated:4.1f} [{self.slider_fill(self.opinionated, 5)}] ")

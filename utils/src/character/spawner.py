@@ -34,8 +34,8 @@ class spawner:
                             age=np.random.normal(30,10),
                             weight=np.random.normal(70,15),
                             profession=profession.title(),
-                            temperament=np.clip((0.5 + np.random.randn() * 0.2), 0, 1),
-                            law_abiding=np.clip((0.5 + np.random.randn() * 0.2), 0, 1),
-                            opinionated=np.clip((0.5 + np.random.randn() * 0.2), 0, 1),
+                            temperament=np.random.normal(0,2),
+                            law_abiding=np.random.normal(0,2),
+                            opinionated=np.random.normal(0,2),
                            )
 
