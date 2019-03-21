@@ -23,6 +23,6 @@ for prof in demo_data['professions']:
 
 s = spawner(demographics=demo_data)
 
-for x in s.get_pop_iter(4):
+for x in s.get_pop_iter(1):
     x.card()
 

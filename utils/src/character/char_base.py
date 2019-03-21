@@ -12,28 +12,28 @@ class char_base:
         self.profession = kwargs.get('profession')
 
         # Numeric Values
-        self.ambitious  = kwargs.get('ambitious', 0.0)
-        self.artsy = kwargs.get('artsy', 0.0)
-        self.assurance = kwargs.get('assurance', 0.0)
-        self.cautious = kwargs.get('cautious', 0.0)
-        self.communication = kwargs.get('communication', 0.0)
-        self.compassionate = kwargs.get('compassionate', 0.0)
-        self.conscientiousness = kwargs.get('conscientiousness', 0.0)
-        self.empathy = kwargs.get('empathy', 0.0)
-        self.extroversion = kwargs.get('extroversion', 0.0)
-        self.law_abiding = kwargs.get('law_abiding', 0.0)
-        self.leadership = kwargs.get('leadership', 0.0)
-        self.opinionated = kwargs.get('opinionated', 0.0)
-        self.optimistic = kwargs.get('optimistic', 0.0)
-        self.organized = kwargs.get('organized', 0.0)
-        self.power = kwargs.get('power', 0.0)
-        self.rationality = kwargs.get('rationality', 0.0)
-        self.resourcefulness = kwargs.get('resourcefulness', 0.0)
-        self.self_control = kwargs.get('self_control', 0.0)
-        self.sociability = kwargs.get('sociability', 0.0)
-        self.spiritual = kwargs.get('spiritual', 0.0)
-        self.temperament = kwargs.get('temperament', 0.0)
-        self.visionary = kwargs.get('visionary', 0.0)
+        self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
+        self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
+        self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Assure 
+        self.cautious = kwargs.get('cautious', 0.0) # Cautious <-> Reckless
+        self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
+        self.compassionate = kwargs.get('compassionate', 0.0) # Callous <-> Kind
+        self.conscientiousness = kwargs.get('conscientiousness', 0.0) # Negligent <-> Meticulous 
+        self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
+        self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
+        self.law_abiding = kwargs.get('law_abiding', 0.0) # Unlawful <-> Lawful
+        self.leadership = kwargs.get('leadership', 0.0) # Follower <-> Commander
+        self.opinionated = kwargs.get('opinionated', 0.0) # Open Minded <-> Dogmatic
+        self.optimistic = kwargs.get('optimistic', 0.0) # Pessimist <-> Optimist
+        self.organized = kwargs.get('organized', 0.0) # Irregular <-> Organized
+        self.power = kwargs.get('power', 0.0) # Impotent <-> Mighty
+        self.rationality = kwargs.get('rationality', 0.0) # Irrational <-> Reasonable
+        self.resourcefulness = kwargs.get('resourcefulness', 0.0) # Unoriginal <-> Ingenious
+        self.self_control = kwargs.get('self_control', 0.0) # Indulgent <-> Restrained
+        self.sociability = kwargs.get('sociability', 0.0) # Coy <-> Gregarious 
+        self.spiritual = kwargs.get('spiritual', 0.0) # Material <-> Spiritual
+        self.temperament = kwargs.get('temperament', 0.0) # Nervous <-> Relaxed
+        self.visionary = kwargs.get('visionary', 0.0) # Pragmatic <-> Idealist
 
 
     def __str__(self):
@@ -88,6 +88,6 @@ class char_base:
         print(f"        Age: {self.age:.0f} years")
         print(f"     Weight: {self.weight:.0f} kg")
         print(f" Profession: {self.profession}")
-        print(f"Temperament: {self.temperament:4.1f} [{self.slider_fill(self.temperament, 5)}] ")
-        print(f"Law Abiding: {self.law_abiding:4.1f} [{self.slider_fill(self.law_abiding, 5)}] ")
-        print(f"Opinionated: {self.opinionated:4.1f} [{self.slider_fill(self.opinionated, 5)}] ")
+        print(f"Temperament: {'Nervous':>11s} [{self.slider_fill(self.temperament, 5)}] {'Relaxed':<11s} ({self.temperament:4.1f})")
+        print(f"Law Abiding: {'Unlawful':>11s} [{self.slider_fill(self.law_abiding, 5)}] {'Lawful':<11s} ({self.law_abiding:4.1f})")
+        print(f"Opinionated: {'Open Minded':>11s} [{self.slider_fill(self.opinionated, 5)}] {'Dogmatic':<11s} ({self.opinionated:4.1f})")
