@@ -15,7 +15,7 @@ class char_base:
         # TODO: Move all these into a dictionary of relevent data
         self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
         self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
-        self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Assure 
+        self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Certain
         self.cautious = kwargs.get('cautious', 0.0) # Cautious <-> Reckless
         self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
         self.compassionate = kwargs.get('compassionate', 0.0) # Cruel <-> Kind
@@ -23,11 +23,12 @@ class char_base:
         self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
         self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
         self.law_abiding = kwargs.get('law_abiding', 0.0) # Unlawful <-> Lawful
-        self.leadership = kwargs.get('leadership', 0.0) # Follower <-> Commander
+        self.leadership = kwargs.get('leadership', 0.0) # Follower <-> Leader
+        self.magical = kwargs.get('magical', 0.0) # Mundane <-> Enchanted
         self.opinionated = kwargs.get('opinionated', 0.0) # Open Minded <-> Dogmatic
         self.optimistic = kwargs.get('optimistic', 0.0) # Pessimist <-> Optimist
         self.organized = kwargs.get('organized', 0.0) # Irregular <-> Organized
-        self.power = kwargs.get('power', 0.0) # Impotent <-> Mighty
+        self.power = kwargs.get('power', 0.0) # Impotent <-> Powerful
         self.rationality = kwargs.get('rationality', 0.0) # Irrational <-> Reasonable
         self.resourcefulness = kwargs.get('resourcefulness', 0.0) # Unoriginal <-> Ingenious
         self.self_control = kwargs.get('self_control', 0.0) # Indulgent <-> Disciplined
