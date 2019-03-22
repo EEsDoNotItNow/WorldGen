@@ -128,6 +128,6 @@ class char_base:
         #print(f"Law Abiding: {'Unlawful':>11s} [{self.slider_fill(self.law_abiding, 5)}] {'Lawful':<11s} ({self.law_abiding:4.1f})")
         #print(f"Opinionated: {'Open Minded':>13s} [{self.slider_fill(self.opinionated, 5)}] {'Dogmatic':<11s} ({self.opinionated:4.1f})")
         for key, value in self.attributes.items():
-            print(f"{key.title():>13s}: {value['neg'].title():>11s} [{self.slider_fill(value['score'], 5)}] {value['pos'].title():<11s} ({value['score']:4.1f})")
+            print(f"{key.title().replace('_',' '):>13s}: {value['neg'].title():>11s} [{self.slider_fill(value['score'], 5)}] {value['pos'].title():<11s} ({value['score']:4.1f})")
 
             #print(key, value)
