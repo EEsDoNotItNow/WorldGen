@@ -1,5 +1,6 @@
 
 import numpy as np
+from collections import defaultdict
 
 class char_base:
 
@@ -13,16 +14,49 @@ class char_base:
 
         # Numeric Values
         # TODO: Move all these into a dictionary of relevent data
-        self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
-        self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
-        self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Certain
-        self.cautious = kwargs.get('cautious', 0.0) # Cautious <-> Reckless
-        self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
-        self.compassionate = kwargs.get('compassionate', 0.0) # Cruel <-> Kind
+        self.attributes = defaultdict(lambda: {'score':0.0,'neg':'Undefined','pos':'Undefined'})
+        
+        #self.attributes['']['neg'] = ''
+        #self.attributes['']['pos'] = ''
+        #self.attributes['']['score'] = kwargs.get('', 0.0)
+        self.attributes['ambition']['neg'] = 'idle'
+        self.attributes['ambition']['pos'] = 'ambitious'
+        self.attributes['ambition']['score'] = kwargs.get('ambition', 0.0)
+        self.attributes['artsy']['neg'] = 'Structural'
+        self.attributes['artsy']['pos'] = 'Artistic'
+        self.attributes['artsy']['score'] = kwargs.get('artsy', 0.0)
+        self.attributes['assurance']['neg'] = 'doubtful'
+        self.attributes['assurance']['pos'] = 'certain'
+        self.attributes['assurance']['score'] = kwargs.get('assurance', 0.0)
+        self.attributes['cautious']['neg'] = 'reckless'
+        self.attributes['cautious']['pos'] = 'cautious'
+        self.attributes['cautious']['score'] = kwargs.get('cautious', 0.0)
+        self.attributes['communication']['neg'] = 'reserved'
+        self.attributes['communication']['pos'] = 'talkative'
+        self.attributes['communication']['score'] = kwargs.get('communication', 0.0)
+        self.attributes['compassionate']['neg'] = 'cruel'
+        self.attributes['compassionate']['pos'] = 'kind'
+        self.attributes['compassionate']['score'] = kwargs.get('compassionate', 0.0)
+        self.attributes['law_abiding']['neg'] = 'Unlawful'
+        self.attributes['law_abiding']['pos'] = 'Lawful'
+        self.attributes['law_abiding']['score'] = kwargs.get('law_abiding', 0.0)
+        self.attributes['spiritual']['neg'] = 'material'
+        self.attributes['spiritual']['pos'] = 'spiritual'
+        self.attributes['spiritual']['score'] = kwargs.get('spiritual', 0.0)
+        self.attributes['temperament']['neg'] = 'nervous'
+        self.attributes['temperament']['pos'] = 'relaxed'
+        self.attributes['temperament']['score'] = kwargs.get('temperament', 0.0)
+    
+        #self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
+        #self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
+        #self.assurance = kwargs.get('assurance', 0.0) # Doubtful <-> Certain
+        #self.cautious = kwargs.get('cautious', 0.0) # Reckless <-> Cautious
+        #self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
+        #self.compassionate = kwargs.get('compassionate', 0.0) # Cruel <-> Kind
         self.conscientiousness = kwargs.get('conscientiousness', 0.0) # Negligent <-> Meticulous 
         self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
         self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
-        self.law_abiding = kwargs.get('law_abiding', 0.0) # Unlawful <-> Lawful
+        #self.law_abiding = kwargs.get('law_abiding', 0.0) # Unlawful <-> Lawful
         self.leadership = kwargs.get('leadership', 0.0) # Follower <-> Leader
         self.magical = kwargs.get('magical', 0.0) # Mundane <-> Enchanted
         self.opinionated = kwargs.get('opinionated', 0.0) # Open Minded <-> Dogmatic
@@ -33,8 +67,8 @@ class char_base:
         self.resourcefulness = kwargs.get('resourcefulness', 0.0) # Unoriginal <-> Ingenious
         self.self_control = kwargs.get('self_control', 0.0) # Indulgent <-> Disciplined
         self.sociability = kwargs.get('sociability', 0.0) # Coy <-> Gregarious 
-        self.spiritual = kwargs.get('spiritual', 0.0) # Material <-> Spiritual
-        self.temperament = kwargs.get('temperament', 0.0) # Nervous <-> Relaxed
+        #self.spiritual = kwargs.get('spiritual', 0.0) # Material <-> Spiritual
+        #self.temperament = kwargs.get('temperament', 0.0) # Nervous <-> Relaxed
         self.visionary = kwargs.get('visionary', 0.0) # Pragmatic <-> Idealist
 
 
@@ -86,10 +120,14 @@ class char_base:
     def card(self):
         # Print an info card
         print("")
-        print(f"       Name: {self.name}")
-        print(f"        Age: {self.age:.0f} years")
-        print(f"     Weight: {self.weight:.0f} kg")
-        print(f" Profession: {self.profession}")
-        print(f"Temperament: {'Nervous':>11s} [{self.slider_fill(self.temperament, 5)}] {'Relaxed':<11s} ({self.temperament:4.1f})")
-        print(f"Law Abiding: {'Unlawful':>11s} [{self.slider_fill(self.law_abiding, 5)}] {'Lawful':<11s} ({self.law_abiding:4.1f})")
-        print(f"Opinionated: {'Open Minded':>11s} [{self.slider_fill(self.opinionated, 5)}] {'Dogmatic':<11s} ({self.opinionated:4.1f})")
+        print(f"         Name: {self.name}")
+        print(f"          Age: {self.age:.0f} years")
+        print(f"       Weight: {self.weight:.0f} kg")
+        print(f"   Profession: {self.profession}")
+        #print(f"Temperament: {'Nervous':>11s} [{self.slider_fill(self.temperament, 5)}] {'Relaxed':<11s} ({self.temperament:4.1f})")
+        #print(f"Law Abiding: {'Unlawful':>11s} [{self.slider_fill(self.law_abiding, 5)}] {'Lawful':<11s} ({self.law_abiding:4.1f})")
+        #print(f"Opinionated: {'Open Minded':>13s} [{self.slider_fill(self.opinionated, 5)}] {'Dogmatic':<11s} ({self.opinionated:4.1f})")
+        for key, value in self.attributes.items():
+            print(f"{key.title():>13s}: {value['neg'].title():>11s} [{self.slider_fill(value['score'], 5)}] {value['pos'].title():<11s} ({value['score']:4.1f})")
+
+            #print(key, value)

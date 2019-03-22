@@ -15,6 +15,7 @@ class spawner:
     def get_pop(self, number):
         """ Generate a population of a given size
         """
+        return list(self.get_pop_iter(number))
         pass
 
 
@@ -35,7 +36,14 @@ class spawner:
                             weight=np.random.normal(70,15),
                             profession=profession.title(),
                             temperament=np.random.normal(0,2),
-                            law_abiding=np.random.normal(0,2),
+                            law_abiding=np.random.normal(1,1),
                             opinionated=np.random.normal(0,2),
+                            artsy=np.random.normal(0,2),
+                            ambition=np.random.normal(-1,1),
+                            assurance=np.random.normal(0,1),
+                            cautious=np.random.normal(0,1),
+                            communication=np.random.normal(0,1),
+                            compassionate=np.random.normal(0,1),
+                            spiritual=np.random.normal(0,2),
                            )
 
