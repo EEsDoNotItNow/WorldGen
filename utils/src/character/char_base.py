@@ -37,6 +37,15 @@ class char_base:
         self.attributes['compassionate']['neg'] = 'cruel'
         self.attributes['compassionate']['pos'] = 'kind'
         self.attributes['compassionate']['score'] = kwargs.get('compassionate', 0.0)
+        self.attributes['care']['neg'] = 'megligent'
+        self.attributes['care']['pos'] = 'meticulous'
+        self.attributes['care']['score'] = kwargs.get('care', 0.0)
+        self.attributes['empathy']['neg'] = 'unfeeling'
+        self.attributes['empathy']['pos'] = 'empathetic'
+        self.attributes['empathy']['score'] = kwargs.get('empathy', 0.0)
+        self.attributes['extroversion']['neg'] = 'reclusive'
+        self.attributes['extroversion']['pos'] = 'outgoing'
+        self.attributes['extroversion']['score'] = kwargs.get('extroversion', 0.0)
         self.attributes['law_abiding']['neg'] = 'Unlawful'
         self.attributes['law_abiding']['pos'] = 'Lawful'
         self.attributes['law_abiding']['score'] = kwargs.get('law_abiding', 0.0)
@@ -46,6 +55,13 @@ class char_base:
         self.attributes['temperament']['neg'] = 'nervous'
         self.attributes['temperament']['pos'] = 'relaxed'
         self.attributes['temperament']['score'] = kwargs.get('temperament', 0.0)
+        #self.attributes['']['neg'] = ''
+        #self.attributes['']['pos'] = ''
+        #self.attributes['']['score'] = kwargs.get('', 0.0)
+
+        #self.attributes['']['neg'] = ''
+        #self.attributes['']['pos'] = ''
+        #self.attributes['']['score'] = kwargs.get('', 0.0)
     
         #self.ambition = kwargs.get('ambition', 0.0) # Idle <-> Ambitious
         #self.artsy = kwargs.get('artsy', 0.0) # Structural <-> Artistic
@@ -53,9 +69,9 @@ class char_base:
         #self.cautious = kwargs.get('cautious', 0.0) # Reckless <-> Cautious
         #self.communication = kwargs.get('communication', 0.0) # Reserved <-> Talkative
         #self.compassionate = kwargs.get('compassionate', 0.0) # Cruel <-> Kind
-        self.conscientiousness = kwargs.get('conscientiousness', 0.0) # Negligent <-> Meticulous 
-        self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
-        self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
+        #self.care = kwargs.get('care', 0.0) # Negligent <-> Meticulous 
+        #self.empathy = kwargs.get('empathy', 0.0) # Unfeeling <-> Empathetic
+        #self.extroversion = kwargs.get('extroversion', 0.0) # Reclusive <-> Outgoing
         #self.law_abiding = kwargs.get('law_abiding', 0.0) # Unlawful <-> Lawful
         self.leadership = kwargs.get('leadership', 0.0) # Follower <-> Leader
         self.magical = kwargs.get('magical', 0.0) # Mundane <-> Enchanted
