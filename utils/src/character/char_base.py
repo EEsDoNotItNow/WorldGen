@@ -86,6 +86,18 @@ class char_base:
         #self.spiritual = kwargs.get('spiritual', 0.0) # Material <-> Spiritual
         #self.temperament = kwargs.get('temperament', 0.0) # Nervous <-> Relaxed
         self.visionary = kwargs.get('visionary', 0.0) # Pragmatic <-> Idealist
+        # Open Minded <=> Parochial
+        # Intuitive <-> Logical
+        # Self Serving <-> Altruistic
+
+        # Other things to add:
+        #   Fears
+        #   Motivations
+        #   How they act (Hard to quantify?) 
+        #   Breaking point (What wouldn't this character normally do)
+        #   Regrets
+        #   Aspirations (Linked to motivation?)
+
 
 
     def __str__(self):
