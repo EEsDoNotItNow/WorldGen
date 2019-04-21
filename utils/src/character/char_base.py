@@ -13,12 +13,8 @@ class char_base:
         self.profession = kwargs.get('profession')
 
         # Numeric Values
-        # TODO: Move all these into a dictionary of relevent data
         self.attributes = defaultdict(lambda: {'score':0.0,'neg':'Undefined','pos':'Undefined'})
         
-        #self.attributes['']['neg'] = ''
-        #self.attributes['']['pos'] = ''
-        #self.attributes['']['score'] = kwargs.get('', 0.0)
         self.attributes['ambition']['neg'] = 'idle'
         self.attributes['ambition']['pos'] = 'ambitious'
         self.attributes['ambition']['score'] = kwargs.get('ambition', 0.0)
