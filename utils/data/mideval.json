@@ -39,6 +39,9 @@
         "chicken butcher": {
             "sv": 1000
         },
+        "clergy": {
+            "sv": 40
+        },
         "cooper": {
             "sv": 700
         },
@@ -78,6 +81,9 @@
         "jeweler": {
             "sv": 400
         },
+        "lawyer": {
+            "sv": 650
+        },
         "locksmith": {
             "sv": 1900
         },
@@ -107,6 +113,9 @@
         },
         "pursemaker": {
             "sv": 1100
+        },
+        "priest": {
+            "sv": 1300
         },
         "roofer": {
             "sv": 1800

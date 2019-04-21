@@ -179,14 +179,14 @@ class char_base:
     def card(self):
         # Print an info card
         print("")
-        print(f"         Name: {self.name}")
-        print(f"          Age: {self.age:.0f} years")
-        print(f"       Weight: {self.weight:.0f} kg")
-        print(f"   Profession: {self.profession}")
+        print(f"           Name: {self.name}")
+        print(f"            Age: {self.age:.0f} years")
+        print(f"         Weight: {self.weight:.0f} kg")
+        print(f"     Profession: {self.profession}")
         #print(f"Temperament: {'Nervous':>11s} [{self.slider_fill(self.temperament, 5)}] {'Relaxed':<11s} ({self.temperament:4.1f})")
         #print(f"Law Abiding: {'Unlawful':>11s} [{self.slider_fill(self.law_abiding, 5)}] {'Lawful':<11s} ({self.law_abiding:4.1f})")
         #print(f"Opinionated: {'Open Minded':>13s} [{self.slider_fill(self.opinionated, 5)}] {'Dogmatic':<11s} ({self.opinionated:4.1f})")
         for key, value in self.attributes.items():
-            print(f"{key.title().replace('_',' '):>13s}: {value['neg'].title():>11s} [{self.slider_fill(value['score'], 5)}] {value['pos'].title():<11s} ({value['score']:4.1f})")
+            print(f"{key.title().replace('_',' '):>15s}: {value['neg'].title():>11s} [{self.slider_fill(value['score'], 7)}] {value['pos'].title():<11s} ({value['score']:4.1f})")
 
             #print(key, value)
